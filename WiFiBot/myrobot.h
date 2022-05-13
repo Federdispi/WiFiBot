@@ -17,6 +17,7 @@ public:
     QByteArray DataToSend;
     QByteArray DataReceived;
     QMutex Mutex;
+    void setSpeed();
 
 signals:
     void updateUI(const QByteArray Data);
@@ -26,6 +27,7 @@ public slots:
     void bytesWritten(qint64 bytes);
     void readyRead();
     void MyTimerSlot();
+    void speed();
 
 private:
     QTcpSocket *socket;

@@ -43,6 +43,10 @@ void MyRobot::disConnect() {
     socket->close();
 }
 
+void MyRobot::speed() {
+    qDebug() << "Speed setted on 120...";
+}
+
 void MyRobot::connected() {
     qDebug() << "connected..."; // Hey server, tell me about you.
 }
@@ -67,4 +71,40 @@ void MyRobot::MyTimerSlot() {
     while(Mutex.tryLock());
     socket->write(DataToSend);
     Mutex.unlock();
+}
+
+short Crc16(QByteArray Adresse_tab, unsigned char Taille_max) {
+    unsigned int Crc = 0xFFFF;
+    unsigned int Polynome = 0xA001;
+    unsigned int CptOctet = 0;
+    unsigned int CptBit = 0;
+    unsigned int Parity = 0;
+
+    Crc = 0XFFFF;
+    Polynome = 0xA001;
+    for(CptOctet = 0; CptOctet < Taille_max; CptOctet++) {
+        Crc ^= *(Adresse_tab + CptOctet);
+        for(CptBit = 0; CptBit <= 7; CptBit ++) {
+            Parity = Crc;
+            Crc >>= 1;
+            if(Parity%2 == true) Crc ^= Polynome;
+        }
+    }
+    return Crc;
+}
+
+void MyRobot::setSpeed() {
+    QByteArray sbuf;
+    sbuf.resize(10);
+    sbuf[0] = 255;
+    sbuf[1] = 0x07;
+    sbuf[2] = 120;
+    sbuf[3] = 00;
+    sbuf[4] = 120;
+    sbuf[6] = 0;
+    sbuf[7] = 80;
+    short mycrcsend = Crc16(sbuf,7);
+    sbuf[8] = mycrcsend;
+    sbuf[9] = (mycrcsend>>8);
+    socket->write(sbuf);
 }

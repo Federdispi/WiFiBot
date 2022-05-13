@@ -22,6 +22,6 @@ void MainWindow::on_connection_clicked()
 
 void MainWindow::on_disconnection_clicked()
 {
-    myRobot->disConnect();
+    myRobot->setSpeed();
 }
 
