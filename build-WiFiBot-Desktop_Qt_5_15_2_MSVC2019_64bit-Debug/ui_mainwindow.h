@@ -11,6 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -25,6 +27,12 @@ public:
     QWidget *centralwidget;
     QPushButton *connection;
     QPushButton *disconnection;
+    QPushButton *avancer;
+    QPushButton *reculer;
+    QPushButton *droite;
+    QPushButton *gauche;
+    QFrame *frame;
+    QDoubleSpinBox *speed;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,10 +45,41 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         connection = new QPushButton(centralwidget);
         connection->setObjectName(QString::fromUtf8("connection"));
-        connection->setGeometry(QRect(-1, -7, 381, 451));
+        connection->setGeometry(QRect(0, 0, 161, 81));
         disconnection = new QPushButton(centralwidget);
         disconnection->setObjectName(QString::fromUtf8("disconnection"));
-        disconnection->setGeometry(QRect(380, 0, 421, 451));
+        disconnection->setGeometry(QRect(160, 0, 161, 81));
+        avancer = new QPushButton(centralwidget);
+        avancer->setObjectName(QString::fromUtf8("avancer"));
+        avancer->setGeometry(QRect(130, 250, 121, 101));
+        reculer = new QPushButton(centralwidget);
+        reculer->setObjectName(QString::fromUtf8("reculer"));
+        reculer->setGeometry(QRect(130, 450, 121, 101));
+        droite = new QPushButton(centralwidget);
+        droite->setObjectName(QString::fromUtf8("droite"));
+        droite->setGeometry(QRect(250, 350, 121, 101));
+        gauche = new QPushButton(centralwidget);
+        gauche->setObjectName(QString::fromUtf8("gauche"));
+        gauche->setGeometry(QRect(10, 350, 121, 101));
+        frame = new QFrame(centralwidget);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setGeometry(QRect(339, 9, 451, 301));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        speed = new QDoubleSpinBox(centralwidget);
+        speed->setObjectName(QString::fromUtf8("speed"));
+        speed->setGeometry(QRect(60, 130, 181, 91));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(speed->sizePolicy().hasHeightForWidth());
+        speed->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Tw Cen MT Condensed Extra Bold"));
+        font.setPointSize(36);
+        speed->setFont(font);
+        speed->setDecimals(0);
+        speed->setMaximum(200.000000000000000);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -60,6 +99,10 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         connection->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         disconnection->setText(QCoreApplication::translate("MainWindow", "Disconnect", nullptr));
+        avancer->setText(QCoreApplication::translate("MainWindow", "Avancer", nullptr));
+        reculer->setText(QCoreApplication::translate("MainWindow", "Reculer", nullptr));
+        droite->setText(QCoreApplication::translate("MainWindow", "Droite", nullptr));
+        gauche->setText(QCoreApplication::translate("MainWindow", "Gauche", nullptr));
     } // retranslateUi
 
 };

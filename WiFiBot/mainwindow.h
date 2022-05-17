@@ -19,9 +19,20 @@ public:
 private slots:
 
 
+
     void on_connection_clicked();
 
     void on_disconnection_clicked();
+
+    void on_avancer_clicked();
+
+    void on_speed_valueChanged(double speed);
+
+    void on_reculer_clicked();
+
+    void on_gauche_clicked();
+
+    void on_droite_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -22,6 +22,36 @@ void MainWindow::on_connection_clicked()
 
 void MainWindow::on_disconnection_clicked()
 {
-    myRobot->setSpeed();
+    myRobot->disConnect();
+}
+
+
+void MainWindow::on_avancer_clicked()
+{
+    myRobot->goForward();
+}
+
+
+void MainWindow::on_speed_valueChanged(double speed)
+{
+    myRobot->setSpeed(speed);
+}
+
+
+void MainWindow::on_reculer_clicked()
+{
+    myRobot->goBackward();
+}
+
+
+void MainWindow::on_gauche_clicked()
+{
+    myRobot->goLeftside();
+}
+
+
+void MainWindow::on_droite_clicked()
+{
+    myRobot->goRightside();
 }
 
