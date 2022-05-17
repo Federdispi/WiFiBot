@@ -3,6 +3,7 @@
 #include "myrobot.h"
 
 MyRobot::MyRobot(QObject *parent) : QObject(parent) {
+    _speed = 0;
     DataToSend.resize(9);
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
@@ -93,14 +94,85 @@ short Crc16(QByteArray Adresse_tab, unsigned char Taille_max) {
     return Crc;
 }
 
-void MyRobot::setSpeed() {
+void MyRobot::setSpeed(int speed) {
+    _speed = speed;
+}
+
+void MyRobot::goForward() {
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
-    DataToSend[2] = 0x78;
-    DataToSend[3] = 0;
-    DataToSend[4] = 0x78;
-    DataToSend[5] = 0;
-    DataToSend[6] = 0x50;
+    if(_speed > 120) {
+        DataToSend[2] = 120;
+        DataToSend[3] = _speed - 120;
+        DataToSend[4] = 120;
+        DataToSend[5] = _speed - 120;
+    } else {
+        DataToSend[2] = _speed;
+        DataToSend[3] = 0;
+        DataToSend[4] = _speed;
+        DataToSend[5] = 0;
+    }
+    DataToSend[6] = 80;
+    short crc = Crc16(DataToSend, 7);
+    DataToSend[7] = crc;
+    DataToSend[8] = (crc >> 8);
+}
+
+void MyRobot::goBackward() {
+    DataToSend[0] = 0xFF;
+    DataToSend[1] = 0x07;
+    if(_speed > 120) {
+        DataToSend[2] = 120;
+        DataToSend[3] = _speed - 120;
+        DataToSend[4] = 120;
+        DataToSend[5] = _speed - 120;
+    } else {
+        DataToSend[2] = _speed;
+        DataToSend[3] = 0;
+        DataToSend[4] = _speed;
+        DataToSend[5] = 0;
+    }
+    DataToSend[6] = 0;
+    short crc = Crc16(DataToSend, 7);
+    DataToSend[7] = crc;
+    DataToSend[8] = (crc >> 8);
+}
+
+void MyRobot::goRightside() {
+    DataToSend[0] = 0xFF;
+    DataToSend[1] = 0x07;
+    if(_speed > 120) {
+        DataToSend[2] = 120;
+        DataToSend[3] = _speed - 120;
+        DataToSend[4] = 120;
+        DataToSend[5] = _speed - 120;
+    } else {
+        DataToSend[2] = _speed;
+        DataToSend[3] = 0;
+        DataToSend[4] = _speed;
+        DataToSend[5] = 0;
+    }
+    DataToSend[6] = 32;
+    short crc = Crc16(DataToSend, 7);
+    DataToSend[7] = crc;
+    DataToSend[8] = (crc >> 8);
+}
+
+void MyRobot::goLeftside() {
+    DataToSend[0] = 0xFF;
+    DataToSend[1] = 0x07;
+    if(_speed > 120) {
+        DataToSend[2] = 120;
+        DataToSend[3] = _speed - 120;
+        DataToSend[4] = 120;
+        DataToSend[5] = _speed - 120;
+    } else {
+        DataToSend[2] = _speed;
+        DataToSend[3] = 0;
+        DataToSend[4] = _speed;
+        DataToSend[5] = 0;
+    }
+    DataToSend[6] = 128;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);

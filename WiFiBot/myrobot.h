@@ -17,7 +17,11 @@ public:
     QByteArray DataToSend;
     QByteArray DataReceived;
     QMutex Mutex;
-    void setSpeed();
+    void goForward();
+    void goBackward();
+    void goRightside();
+    void goLeftside();
+    void setSpeed(int speed);
 
 signals:
     void updateUI(const QByteArray Data);
@@ -32,6 +36,7 @@ public slots:
 private:
     QTcpSocket *socket;
     QTimer *TimerEnvoi;
+    int _speed;
 };
 
 #endif // MYROBOT_H
