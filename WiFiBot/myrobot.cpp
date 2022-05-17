@@ -82,8 +82,8 @@ short Crc16(QByteArray Adresse_tab, unsigned char Taille_max) {
 
     Crc = 0XFFFF;
     Polynome = 0xA001;
-    for(CptOctet = 0; CptOctet < Taille_max; CptOctet++) {
-        Crc ^= *(Adresse_tab + CptOctet);
+    for(CptOctet = 1; CptOctet < Taille_max; CptOctet++) {
+        Crc ^= Adresse_tab[CptOctet];
         for(CptBit = 0; CptBit <= 7; CptBit ++) {
             Parity = Crc;
             Crc >>= 1;
@@ -94,17 +94,14 @@ short Crc16(QByteArray Adresse_tab, unsigned char Taille_max) {
 }
 
 void MyRobot::setSpeed() {
-    QByteArray sbuf;
-    sbuf.resize(10);
-    sbuf[0] = 255;
-    sbuf[1] = 0x07;
-    sbuf[2] = 120;
-    sbuf[3] = 00;
-    sbuf[4] = 120;
-    sbuf[6] = 0;
-    sbuf[7] = 80;
-    short mycrcsend = Crc16(sbuf,7);
-    sbuf[8] = mycrcsend;
-    sbuf[9] = (mycrcsend>>8);
-    socket->write(sbuf);
+    DataToSend[0] = 0xFF;
+    DataToSend[1] = 0x07;
+    DataToSend[2] = 0x78;
+    DataToSend[3] = 0;
+    DataToSend[4] = 0x78;
+    DataToSend[5] = 0;
+    DataToSend[6] = 0x50;
+    short crc = Crc16(DataToSend, 7);
+    DataToSend[7] = crc;
+    DataToSend[8] = (crc >> 8);
 }
