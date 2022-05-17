@@ -152,7 +152,7 @@ void MyRobot::goRightside() {
         DataToSend[4] = _speed;
         DataToSend[5] = 0;
     }
-    DataToSend[6] = 32;
+    DataToSend[6] = 64;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
@@ -172,7 +172,7 @@ void MyRobot::goLeftside() {
         DataToSend[4] = _speed;
         DataToSend[5] = 0;
     }
-    DataToSend[6] = 128;
+    DataToSend[6] = 16;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
