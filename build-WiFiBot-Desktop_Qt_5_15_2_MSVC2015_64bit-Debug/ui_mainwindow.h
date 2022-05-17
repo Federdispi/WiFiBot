@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -26,11 +25,6 @@ public:
     QWidget *centralwidget;
     QPushButton *connection;
     QPushButton *disconnection;
-    QPushButton *avancer;
-    QPushButton *reculer;
-    QPushButton *droite;
-    QPushButton *gauche;
-    QFrame *frame;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -43,31 +37,14 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         connection = new QPushButton(centralwidget);
         connection->setObjectName(QString::fromUtf8("connection"));
-        connection->setGeometry(QRect(0, 0, 161, 81));
+        connection->setGeometry(QRect(-1, -7, 381, 451));
         disconnection = new QPushButton(centralwidget);
         disconnection->setObjectName(QString::fromUtf8("disconnection"));
-        disconnection->setGeometry(QRect(160, 0, 161, 81));
-        avancer = new QPushButton(centralwidget);
-        avancer->setObjectName(QString::fromUtf8("avancer"));
-        avancer->setGeometry(QRect(130, 250, 121, 101));
-        reculer = new QPushButton(centralwidget);
-        reculer->setObjectName(QString::fromUtf8("reculer"));
-        reculer->setGeometry(QRect(130, 450, 121, 101));
-        droite = new QPushButton(centralwidget);
-        droite->setObjectName(QString::fromUtf8("droite"));
-        droite->setGeometry(QRect(250, 350, 121, 101));
-        gauche = new QPushButton(centralwidget);
-        gauche->setObjectName(QString::fromUtf8("gauche"));
-        gauche->setGeometry(QRect(10, 350, 121, 101));
-        frame = new QFrame(centralwidget);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(339, 9, 451, 301));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
+        disconnection->setGeometry(QRect(380, 0, 421, 451));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 17));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -83,10 +60,6 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         connection->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         disconnection->setText(QCoreApplication::translate("MainWindow", "Disconnect", nullptr));
-        avancer->setText(QCoreApplication::translate("MainWindow", "Avancer", nullptr));
-        reculer->setText(QCoreApplication::translate("MainWindow", "Reculer", nullptr));
-        droite->setText(QCoreApplication::translate("MainWindow", "Droite", nullptr));
-        gauche->setText(QCoreApplication::translate("MainWindow", "Gauche", nullptr));
     } // retranslateUi
 
 };
