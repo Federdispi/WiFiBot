@@ -55,3 +55,27 @@ void MainWindow::on_droite_clicked()
     myRobot->goRightside();
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event) {
+    int code = event->key();
+    switch(code)
+    {
+    case Qt::Key_W:
+        myRobot->goForward();
+        break;
+    case Qt::Key_Z:
+        myRobot->goForward();
+        break;
+    case Qt::Key_S:
+        myRobot->goBackward();
+        break;
+    case Qt::Key_A:
+        myRobot->goLeftside();
+        break;
+    case Qt::Key_Q:
+        myRobot->goLeftside();
+        break;
+    case Qt::Key_D:
+        myRobot->goRightside();
+        break;
+    }
+}

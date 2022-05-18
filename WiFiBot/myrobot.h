@@ -38,8 +38,6 @@ private:
     QTcpSocket *socket;
     QTimer *TimerEnvoi;
     int _speed;
-protected:
-    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MYROBOT_H
