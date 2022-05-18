@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QMutex>
+#include <QKeyEvent>
 
 class MyRobot : public QObject {
     Q_OBJECT

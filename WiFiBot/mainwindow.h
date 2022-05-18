@@ -37,5 +37,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 #endif // MAINWINDOW_H
