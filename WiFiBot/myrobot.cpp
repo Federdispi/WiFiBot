@@ -177,3 +177,8 @@ void MyRobot::goLeftside() {
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
 }
+
+void MyRobot::keyPressEvent(QKeyEvent *event) {
+    if(event->key() == Qt::Key_W)
+        goForward();
+}

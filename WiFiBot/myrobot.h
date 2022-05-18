@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QMutex>
+#include <QKeyEvent>
 
 class MyRobot : public QObject {
     Q_OBJECT
@@ -37,6 +38,8 @@ private:
     QTcpSocket *socket;
     QTimer *TimerEnvoi;
     int _speed;
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MYROBOT_H
