@@ -23,6 +23,7 @@ public:
     void goRightside();
     void goLeftside();
     void setSpeed(int speed);
+    int getDistanceReceived();
 
 signals:
     void updateUI(const QByteArray Data);
@@ -38,6 +39,8 @@ private:
     QTcpSocket *socket;
     QTimer *TimerEnvoi;
     int _speed;
+    double distanceReceived;
+    int previous_tics;
 };
 
 #endif // MYROBOT_H

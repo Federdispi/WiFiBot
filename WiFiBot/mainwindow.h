@@ -37,6 +37,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
+    QTimer *TimerReceive;
+    void display_speed();
 
 protected:
     void keyPressEvent(QKeyEvent *event);

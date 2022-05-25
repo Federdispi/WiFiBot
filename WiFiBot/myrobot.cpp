@@ -1,9 +1,9 @@
 // myrobot.cpp
 
 #include "myrobot.h"
-
 MyRobot::MyRobot(QObject *parent) : QObject(parent) {
     _speed = 0;
+    previous_tics=0;
     DataToSend.resize(9);
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
@@ -17,7 +17,8 @@ MyRobot::MyRobot(QObject *parent) : QObject(parent) {
     DataReceived.resize(21);
     TimerEnvoi = new QTimer();
     // setup signal and slot
-    connect(TimerEnvoi, SIGNAL(timeout()), this, SLOT(MyTimerSlot())); //Send data to wifibot timer
+    connect(TimerEnvoi, SIGNAL(timeout()), this, SLOT(MyTimerSlot()));
+    //Send data to wifibot timer
 }
 
 
@@ -176,4 +177,16 @@ void MyRobot::goLeftside() {
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
+}
+
+int MyRobot::getDistanceReceived() {
+    //DataReceived = socket->readAll();
+    int tics;
+    tics=DataReceived[0]+(DataReceived[1]<<8); //on recoit les data vitesse
+    qDebug()<<"tics : ";
+    qDebug()<<tics;
+    tics-=previous_tics;
+    distanceReceived=tics*0.44/2048;
+    previous_tics=tics;
+    return distanceReceived;
 }

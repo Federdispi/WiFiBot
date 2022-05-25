@@ -34,6 +34,7 @@ public:
     QGroupBox *affichage_robot;
     QDoubleSpinBox *speed;
     QLCDNumber *battery;
+    QLCDNumber *speed_received;
     QGroupBox *controle_robot;
     QPushButton *reculer;
     QPushButton *droite;
@@ -96,6 +97,15 @@ public:
         battery->setFocusPolicy(Qt::NoFocus);
         battery->setLayoutDirection(Qt::LeftToRight);
         battery->setLineWidth(5);
+        speed_received = new QLCDNumber(affichage_robot);
+        speed_received->setObjectName(QString::fromUtf8("speed_received"));
+        speed_received->setGeometry(QRect(0, 110, 91, 61));
+        sizePolicy1.setHeightForWidth(speed_received->sizePolicy().hasHeightForWidth());
+        speed_received->setSizePolicy(sizePolicy1);
+        speed_received->setFont(font);
+        speed_received->setFocusPolicy(Qt::NoFocus);
+        speed_received->setLayoutDirection(Qt::LeftToRight);
+        speed_received->setLineWidth(5);
         controle_robot = new QGroupBox(centralwidget);
         controle_robot->setObjectName(QString::fromUtf8("controle_robot"));
         controle_robot->setGeometry(QRect(0, 230, 381, 331));
@@ -138,7 +148,7 @@ public:
         controle_camera->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 17));
+        menubar->setGeometry(QRect(0, 0, 800, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

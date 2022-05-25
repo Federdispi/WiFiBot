@@ -260,19 +260,30 @@ debug\moc_mainwindow.cpp: ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qbasictimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QMutex \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\QKeyEvent \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qwidget.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpalette.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qcolor.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qrgb.h \
@@ -280,8 +291,6 @@ debug\moc_mainwindow.cpp: ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qbrush.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qmatrix.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qline.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtransform.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qimage.h \
@@ -292,19 +301,11 @@ debug\moc_mainwindow.cpp: ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qsizepolicy.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qcursor.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qicon.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.2\msvc2015_64\bin\moc.exe
-	C:\Qt\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2015_64bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.2/msvc2015_64/mkspecs/win32-msvc -I"C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/WiFiBot" -IC:/Qt/5.15.2/msvc2015_64/include -IC:/Qt/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2015_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2015_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" ..\WiFiBot\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Pierre/Desktop/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2015_64bit-Debug/debug/moc_predefs.h -IC:/Qt/5.15.2/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Pierre/Desktop/WiFiBot/WiFiBot -IC:/Qt/5.15.2/msvc2015_64/include -IC:/Qt/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2015_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2015_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt" ..\WiFiBot\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug\moc_myrobot.cpp: ..\WiFiBot\myrobot.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QObject \
@@ -383,9 +384,27 @@ debug\moc_myrobot.cpp: ..\WiFiBot\myrobot.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qbasictimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QMutex \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\QKeyEvent \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.2\msvc2015_64\bin\moc.exe
-	C:\Qt\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2015_64bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.2/msvc2015_64/mkspecs/win32-msvc -I"C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/WiFiBot" -IC:/Qt/5.15.2/msvc2015_64/include -IC:/Qt/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2015_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2015_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" ..\WiFiBot\myrobot.h -o debug\moc_myrobot.cpp
+	C:\Qt\5.15.2\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Pierre/Desktop/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2015_64bit-Debug/debug/moc_predefs.h -IC:/Qt/5.15.2/msvc2015_64/mkspecs/win32-msvc -IC:/Users/Pierre/Desktop/WiFiBot/WiFiBot -IC:/Qt/5.15.2/msvc2015_64/include -IC:/Qt/5.15.2/msvc2015_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2015_64/include/QtGui -IC:/Qt/5.15.2/msvc2015_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2015_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2015_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt" ..\WiFiBot\myrobot.h -o debug\moc_myrobot.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -488,19 +507,30 @@ debug\main.obj: ..\WiFiBot\main.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qbasictimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QMutex \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\QKeyEvent \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qwidget.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpalette.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qcolor.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qrgb.h \
@@ -508,8 +538,6 @@ debug\main.obj: ..\WiFiBot\main.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qbrush.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qmatrix.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qline.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtransform.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qimage.h \
@@ -520,14 +548,6 @@ debug\main.obj: ..\WiFiBot\main.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qsizepolicy.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qcursor.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qicon.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\QApplication \
@@ -616,19 +636,30 @@ debug\mainwindow.obj: ..\WiFiBot\mainwindow.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qbasictimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QMutex \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\QKeyEvent \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\QMainWindow \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qmainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qwidget.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpaintdevice.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpalette.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qcolor.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qrgb.h \
@@ -636,8 +667,6 @@ debug\mainwindow.obj: ..\WiFiBot\mainwindow.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qbrush.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qmatrix.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qpolygon.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qline.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtransform.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qimage.h \
@@ -648,14 +677,6 @@ debug\mainwindow.obj: ..\WiFiBot\mainwindow.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qfontinfo.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qsizepolicy.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qcursor.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qicon.h \
 		ui_mainwindow.h
@@ -736,7 +757,25 @@ debug\myrobot.obj: ..\WiFiBot\myrobot.cpp ..\WiFiBot\myrobot.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QTimer \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qtimer.h \
 		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qbasictimer.h \
-		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QMutex
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\QMutex \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\QKeyEvent \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qevent.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtguiglobal.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtgui-config.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qregion.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qrect.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qmargins.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qsize.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qdatastream.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qkeysequence.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurl.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qurlquery.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qvector2d.h \
+		C:\Qt\5.15.2\msvc2015_64\include\QtGui\qtouchdevice.h
 
 debug\moc_mainwindow.obj: debug\moc_mainwindow.cpp 
 
