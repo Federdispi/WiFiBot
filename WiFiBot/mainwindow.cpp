@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     myRobot = new MyRobot;
+    webcam();
 }
 
 MainWindow::~MainWindow()
@@ -78,4 +79,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
         myRobot->goRightside();
         break;
     }
+}
+
+void MainWindow::webcam() {
+    QWebEngineView *qWebEngineView = new QWebEngineView(ui->frame);
+    qWebEngineView->load(QUrl("http://192.168.1.106:8080/?action=stream"));
+    qWebEngineView->show();
 }
