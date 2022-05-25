@@ -3,6 +3,7 @@
 
 #include "myrobot.h"
 #include <QMainWindow>
+#include <QWebEngineView>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -37,6 +38,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
+    void webcam();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
