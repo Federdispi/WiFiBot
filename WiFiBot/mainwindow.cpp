@@ -85,4 +85,6 @@ void MainWindow::webcam() {
     QWebEngineView *qWebEngineView = new QWebEngineView(ui->frame);
     qWebEngineView->load(QUrl("http://192.168.1.106:8080/?action=stream"));
     qWebEngineView->show();
+    qWebEngineView->resize(451,301);
+    qWebEngineView->setContentsMargins(0,0,0,0);
 }
