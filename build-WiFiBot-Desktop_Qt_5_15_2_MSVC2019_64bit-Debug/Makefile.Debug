@@ -339,7 +339,7 @@ debug\moc_mainwindow.cpp: ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qpagesize.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	C:\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -I"C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/WiFiBot" -IC:/Qt/5.15.2/msvc2019_64/include -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineCore -IC:/Qt/5.15.2/msvc2019_64/include/QtQuick -IC:/Qt/5.15.2/msvc2019_64/include/QtPrintSupport -IC:/Qt/5.15.2/msvc2019_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtGui -IC:/Qt/5.15.2/msvc2019_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2019_64/include/QtQmlModels -IC:/Qt/5.15.2/msvc2019_64/include/QtWebChannel -IC:/Qt/5.15.2/msvc2019_64/include/QtQml -IC:/Qt/5.15.2/msvc2019_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2019_64/include/QtPositioning -IC:/Qt/5.15.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" ..\WiFiBot\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Pierre/Desktop/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/debug/moc_predefs.h -IC:/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/Pierre/Desktop/WiFiBot/WiFiBot -IC:/Qt/5.15.2/msvc2019_64/include -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineCore -IC:/Qt/5.15.2/msvc2019_64/include/QtQuick -IC:/Qt/5.15.2/msvc2019_64/include/QtPrintSupport -IC:/Qt/5.15.2/msvc2019_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtGui -IC:/Qt/5.15.2/msvc2019_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2019_64/include/QtQmlModels -IC:/Qt/5.15.2/msvc2019_64/include/QtWebChannel -IC:/Qt/5.15.2/msvc2019_64/include/QtQml -IC:/Qt/5.15.2/msvc2019_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2019_64/include/QtPositioning -IC:/Qt/5.15.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt" ..\WiFiBot\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug\moc_myrobot.cpp: ..\WiFiBot\myrobot.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \
@@ -438,7 +438,7 @@ debug\moc_myrobot.cpp: ..\WiFiBot\myrobot.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qtouchdevice.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.2\msvc2019_64\bin\moc.exe
-	C:\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -I"C:/Users/lucas/Documents/ESIREM/projet informatique/WiFiBot/WiFiBot" -IC:/Qt/5.15.2/msvc2019_64/include -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineCore -IC:/Qt/5.15.2/msvc2019_64/include/QtQuick -IC:/Qt/5.15.2/msvc2019_64/include/QtPrintSupport -IC:/Qt/5.15.2/msvc2019_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtGui -IC:/Qt/5.15.2/msvc2019_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2019_64/include/QtQmlModels -IC:/Qt/5.15.2/msvc2019_64/include/QtWebChannel -IC:/Qt/5.15.2/msvc2019_64/include/QtQml -IC:/Qt/5.15.2/msvc2019_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2019_64/include/QtPositioning -IC:/Qt/5.15.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" ..\WiFiBot\myrobot.h -o debug\moc_myrobot.cpp
+	C:\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Pierre/Desktop/WiFiBot/build-WiFiBot-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/debug/moc_predefs.h -IC:/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/Pierre/Desktop/WiFiBot/WiFiBot -IC:/Qt/5.15.2/msvc2019_64/include -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtWebEngineCore -IC:/Qt/5.15.2/msvc2019_64/include/QtQuick -IC:/Qt/5.15.2/msvc2019_64/include/QtPrintSupport -IC:/Qt/5.15.2/msvc2019_64/include/QtWidgets -IC:/Qt/5.15.2/msvc2019_64/include/QtGui -IC:/Qt/5.15.2/msvc2019_64/include/QtANGLE -IC:/Qt/5.15.2/msvc2019_64/include/QtQmlModels -IC:/Qt/5.15.2/msvc2019_64/include/QtWebChannel -IC:/Qt/5.15.2/msvc2019_64/include/QtQml -IC:/Qt/5.15.2/msvc2019_64/include/QtNetwork -IC:/Qt/5.15.2/msvc2019_64/include/QtPositioning -IC:/Qt/5.15.2/msvc2019_64/include/QtCore -I. -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt" ..\WiFiBot\myrobot.h -o debug\moc_myrobot.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -781,39 +781,7 @@ debug\mainwindow.obj: ..\WiFiBot\mainwindow.cpp ..\WiFiBot\mainwindow.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtWebEngineCore\qwebenginehttprequest.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qpagelayout.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qpagesize.h \
-		ui_mainwindow.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QApplication \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qapplication.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtCore\qcoreapplication.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtCore\qeventloop.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qguiapplication.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qinputmethod.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QDoubleSpinBox \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qspinbox.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtCore\qregularexpression.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QFrame \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QGroupBox \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QLCDNumber \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qlcdnumber.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QScrollBar \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qscrollbar.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\qstatusbar.h \
-		C:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget
+		ui_mainwindow.h
 
 debug\myrobot.obj: ..\WiFiBot\myrobot.cpp ..\WiFiBot\myrobot.h \
 		C:\Qt\5.15.2\msvc2019_64\include\QtCore\QObject \

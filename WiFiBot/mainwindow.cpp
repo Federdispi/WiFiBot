@@ -8,6 +8,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     myRobot = new MyRobot;
     webcam();
+    TimerReceive = new QTimer(this);
+    TimerReceiveIR=new QTimer(this);
+    connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_speed);
+    connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_battery);
+    TimerReceive->start(1000);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irG);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irD);
+    TimerReceiveIR->start(100);
 }
 
 MainWindow::~MainWindow()

@@ -24,6 +24,9 @@ public:
     void goLeftside();
     void setSpeed(int speed);
     int getDistanceReceived();
+    int getBatteryReceived();
+    int get_ir_G();
+    int get_ir_D();
 
 signals:
     void updateUI(const QByteArray Data);
@@ -34,9 +37,6 @@ public slots:
     void readyRead();
     void MyTimerSlot();
     void speed();
-    int getBatteryReceived();
-    int get_ir_G();
-    int get_ir_D();
 
 private:
     QTcpSocket *socket;

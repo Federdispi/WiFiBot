@@ -38,6 +38,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
+    QTimer *TimerReceive;
+    QTimer *TimerReceiveIR;
     void webcam();
     void display_speed();
     void display_battery();
