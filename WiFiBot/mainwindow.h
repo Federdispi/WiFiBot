@@ -39,6 +39,10 @@ private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
     void webcam();
+    void display_speed();
+    void display_battery();
+    void display_irG();
+    void display_irD();
 
 protected:
     void keyPressEvent(QKeyEvent *event);

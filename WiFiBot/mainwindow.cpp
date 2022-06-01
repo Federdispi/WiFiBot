@@ -88,3 +88,29 @@ void MainWindow::webcam() {
     qWebEngineView->resize(451,301);
     qWebEngineView->setContentsMargins(0,0,0,0);
 }
+
+void MainWindow::display_speed()
+{
+    int distance = myRobot->getDistanceReceived();
+    int speed = distance * 3.6;
+    ui->speed_received->display(speed);
+}
+
+
+void MainWindow::display_battery()
+{
+    int battery=myRobot->getBatteryReceived();
+    ui->battery->setValue(battery);
+}
+
+void MainWindow::display_irG()
+{
+    int ir=myRobot->get_ir_G();
+    ui->ir_G->display(ir);
+}
+
+void MainWindow::display_irD()
+{
+    int ir=myRobot->get_ir_D();
+    ui->ir_D->display(ir);
+}
