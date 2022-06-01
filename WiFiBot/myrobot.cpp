@@ -58,7 +58,7 @@ void MyRobot::disconnected() {
 }
 
 void MyRobot::bytesWritten(qint64 bytes) {
-    qDebug() << bytes << " bytes written...";
+    //qDebug() << bytes << " bytes written...";
 }
 
 void MyRobot::readyRead() {
@@ -185,8 +185,32 @@ int MyRobot::getDistanceReceived() {
     tics=DataReceived[0]+(DataReceived[1]<<8); //on recoit les data vitesse
     qDebug()<<"tics : ";
     qDebug()<<tics;
-    tics-=previous_tics;
+    /*tics-=previous_tics;
     distanceReceived=tics*0.44/2048;
-    previous_tics=tics;
+    previous_tics=tics;*/
+    distanceReceived=tics;
     return distanceReceived;
+}
+
+int MyRobot::getBatteryReceived()
+{
+    int battery;
+    battery=DataReceived[2];
+    qDebug()<<"batterie : ";
+    qDebug()<<battery;
+    return battery;
+}
+
+int MyRobot::get_ir_G()
+{
+    int ir;
+    ir=DataReceived[3];
+    return ir;
+}
+
+int MyRobot::get_ir_D()
+{
+    int ir;
+    ir=DataReceived[4];
+    return ir;
 }

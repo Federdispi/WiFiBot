@@ -34,6 +34,9 @@ public slots:
     void readyRead();
     void MyTimerSlot();
     void speed();
+    int getBatteryReceived();
+    int get_ir_G();
+    int get_ir_D();
 
 private:
     QTcpSocket *socket;

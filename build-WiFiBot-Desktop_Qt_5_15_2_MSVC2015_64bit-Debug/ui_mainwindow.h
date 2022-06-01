@@ -16,7 +16,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollBar>
 #include <QtWidgets/QStatusBar>
@@ -33,8 +33,8 @@ public:
     QFrame *frame;
     QGroupBox *affichage_robot;
     QDoubleSpinBox *speed;
-    QLCDNumber *battery;
     QLCDNumber *speed_received;
+    QProgressBar *battery;
     QGroupBox *controle_robot;
     QPushButton *reculer;
     QPushButton *droite;
@@ -43,14 +43,16 @@ public:
     QGroupBox *controle_camera;
     QScrollBar *horizontalScrollBar;
     QScrollBar *verticalScrollBar;
-    QMenuBar *menubar;
+    QLCDNumber *ir_G;
+    QLCDNumber *ir_D;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(799, 788);
+        MainWindow->setTabShape(QTabWidget::Rounded);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         connection = new QPushButton(centralwidget);
@@ -85,27 +87,23 @@ public:
         speed->setDecimals(0);
         speed->setMaximum(240.000000000000000);
         speed->setSingleStep(10.000000000000000);
-        battery = new QLCDNumber(affichage_robot);
-        battery->setObjectName(QString::fromUtf8("battery"));
-        battery->setGeometry(QRect(190, 20, 91, 61));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(battery->sizePolicy().hasHeightForWidth());
-        battery->setSizePolicy(sizePolicy1);
-        battery->setFont(font);
-        battery->setFocusPolicy(Qt::NoFocus);
-        battery->setLayoutDirection(Qt::LeftToRight);
-        battery->setLineWidth(5);
         speed_received = new QLCDNumber(affichage_robot);
         speed_received->setObjectName(QString::fromUtf8("speed_received"));
         speed_received->setGeometry(QRect(0, 110, 91, 61));
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(speed_received->sizePolicy().hasHeightForWidth());
         speed_received->setSizePolicy(sizePolicy1);
         speed_received->setFont(font);
         speed_received->setFocusPolicy(Qt::NoFocus);
         speed_received->setLayoutDirection(Qt::LeftToRight);
         speed_received->setLineWidth(5);
+        battery = new QProgressBar(affichage_robot);
+        battery->setObjectName(QString::fromUtf8("battery"));
+        battery->setGeometry(QRect(200, 50, 118, 23));
+        battery->setValue(24);
+        battery->setTextVisible(true);
         controle_robot = new QGroupBox(centralwidget);
         controle_robot->setObjectName(QString::fromUtf8("controle_robot"));
         controle_robot->setGeometry(QRect(0, 230, 381, 331));
@@ -139,6 +137,24 @@ public:
         verticalScrollBar->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));"));
         verticalScrollBar->setValue(50);
         verticalScrollBar->setOrientation(Qt::Vertical);
+        ir_G = new QLCDNumber(centralwidget);
+        ir_G->setObjectName(QString::fromUtf8("ir_G"));
+        ir_G->setGeometry(QRect(70, 650, 61, 41));
+        sizePolicy1.setHeightForWidth(ir_G->sizePolicy().hasHeightForWidth());
+        ir_G->setSizePolicy(sizePolicy1);
+        ir_G->setFont(font);
+        ir_G->setFocusPolicy(Qt::NoFocus);
+        ir_G->setLayoutDirection(Qt::LeftToRight);
+        ir_G->setLineWidth(5);
+        ir_D = new QLCDNumber(centralwidget);
+        ir_D->setObjectName(QString::fromUtf8("ir_D"));
+        ir_D->setGeometry(QRect(140, 650, 61, 41));
+        sizePolicy1.setHeightForWidth(ir_D->sizePolicy().hasHeightForWidth());
+        ir_D->setSizePolicy(sizePolicy1);
+        ir_D->setFont(font);
+        ir_D->setFocusPolicy(Qt::NoFocus);
+        ir_D->setLayoutDirection(Qt::LeftToRight);
+        ir_D->setLineWidth(5);
         MainWindow->setCentralWidget(centralwidget);
         connection->raise();
         disconnection->raise();
@@ -146,10 +162,8 @@ public:
         controle_robot->raise();
         frame->raise();
         controle_camera->raise();
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        MainWindow->setMenuBar(menubar);
+        ir_G->raise();
+        ir_D->raise();
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -164,7 +178,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         connection->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         disconnection->setText(QCoreApplication::translate("MainWindow", "Disconnect", nullptr));
-        affichage_robot->setTitle(QCoreApplication::translate("MainWindow", "Zone d'affichage du robot", nullptr));
+        affichage_robot->setTitle(QCoreApplication::translate("MainWindow", "robot", nullptr));
         controle_robot->setTitle(QCoreApplication::translate("MainWindow", "Interface de controle du robot", nullptr));
         reculer->setText(QCoreApplication::translate("MainWindow", "Reculer", nullptr));
         droite->setText(QCoreApplication::translate("MainWindow", "Droite", nullptr));

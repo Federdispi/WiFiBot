@@ -38,7 +38,11 @@ private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
     QTimer *TimerReceive;
+    QTimer *TimerReceiveIR;
     void display_speed();
+    void display_battery();
+    void display_irG();
+    void display_irD();
 
 protected:
     void keyPressEvent(QKeyEvent *event);

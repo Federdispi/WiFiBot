@@ -11,8 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     myRobot = new MyRobot;
     TimerReceive = new QTimer(this);
+    TimerReceiveIR=new QTimer(this);
     connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_speed);
+    connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_battery);
     TimerReceive->start(1000);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irG);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irD);
+    TimerReceiveIR->start(100);
 }
 
 MainWindow::~MainWindow()
@@ -93,3 +98,21 @@ void MainWindow::display_speed()
     ui->speed_received->display(speed);
 }
 
+
+void MainWindow::display_battery()
+{
+    int battery=myRobot->getBatteryReceived();
+    ui->battery->setValue(battery);
+}
+
+void MainWindow::display_irG()
+{
+    int ir=myRobot->get_ir_G();
+    ui->ir_G->display(ir);
+}
+
+void MainWindow::display_irD()
+{
+    int ir=myRobot->get_ir_D();
+    ui->ir_D->display(ir);
+}

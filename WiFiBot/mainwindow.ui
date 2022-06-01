@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>799</width>
+    <height>788</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="connection">
@@ -75,7 +78,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Zone d'affichage du robot</string>
+     <string>robot</string>
     </property>
     <widget class="QDoubleSpinBox" name="speed">
      <property name="geometry">
@@ -108,37 +111,6 @@
       <double>10.000000000000000</double>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="battery">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>20</y>
-       <width>91</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT Condensed Extra Bold</family>
-       <pointsize>36</pointsize>
-      </font>
-     </property>
-     <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="lineWidth">
-      <number>5</number>
-     </property>
-    </widget>
     <widget class="QLCDNumber" name="speed_received">
      <property name="geometry">
       <rect>
@@ -168,6 +140,22 @@
      </property>
      <property name="lineWidth">
       <number>5</number>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="battery">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>50</y>
+       <width>118</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
@@ -294,22 +282,76 @@
      </property>
     </widget>
    </widget>
+   <widget class="QLCDNumber" name="ir_G">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>650</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tw Cen MT Condensed Extra Bold</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="lineWidth">
+     <number>5</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="ir_D">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>650</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tw Cen MT Condensed Extra Bold</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="lineWidth">
+     <number>5</number>
+    </property>
+   </widget>
    <zorder>connection</zorder>
    <zorder>disconnection</zorder>
    <zorder>affichage_robot</zorder>
    <zorder>controle_robot</zorder>
    <zorder>frame</zorder>
    <zorder>controle_camera</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
+   <zorder>ir_G</zorder>
+   <zorder>ir_D</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
