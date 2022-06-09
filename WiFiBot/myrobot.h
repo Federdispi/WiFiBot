@@ -22,6 +22,7 @@ public:
     void goBackward();
     void goRightside();
     void goLeftside();
+    void stop();
     void setSpeed(int speed);
     int getDistanceReceived();
     int getBatteryReceived();

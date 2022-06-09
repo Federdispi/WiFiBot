@@ -35,6 +35,8 @@ private slots:
 
     void on_droite_clicked();
 
+    void on_arret_clicked();
+
 private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
@@ -48,5 +50,6 @@ private:
 
 protected:
     void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
 };
 #endif // MAINWINDOW_H

@@ -25,7 +25,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_connection_clicked()
 {
-    myRobot->doConnect();
+    if(ui->connection->text() == "Connect") {
+        myRobot->doConnect();
+        ui->connection->setText("Disconnect");
+    } else {
+        myRobot->disConnect();
+        ui->connection->setText("Connect");
+    }
 }
 
 
@@ -89,6 +95,31 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
     }
 }
 
+void MainWindow::keyReleaseEvent(QKeyEvent *event) {
+    int code = event->key();
+    switch(code)
+    {
+    case Qt::Key_W:
+        myRobot->stop();
+        break;
+    case Qt::Key_Z:
+        myRobot->stop();
+        break;
+    case Qt::Key_S:
+        myRobot->stop();
+        break;
+    case Qt::Key_A:
+        myRobot->stop();
+        break;
+    case Qt::Key_Q:
+        myRobot->stop();
+        break;
+    case Qt::Key_D:
+        myRobot->stop();
+        break;
+    }
+}
+
 void MainWindow::webcam() {
     QWebEngineView *qWebEngineView = new QWebEngineView(ui->frame);
     qWebEngineView->load(QUrl("http://192.168.1.106:8080/?action=stream"));
@@ -122,3 +153,9 @@ void MainWindow::display_irD()
     int ir=myRobot->get_ir_D();
     ui->ir_D->display(ir);
 }
+
+void MainWindow::on_arret_clicked()
+{
+    myRobot->stop();
+}
+
