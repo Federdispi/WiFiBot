@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     myRobot = new MyRobot;
+    camera = new Camera;
     webcam();
     TimerReceive = new QTimer(this);
     TimerReceiveIR=new QTimer(this);
@@ -91,6 +92,18 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
     case Qt::Key_D:
         myRobot->goRightside();
         break;
+    case Qt::Key_Up:
+        camera->moveUp();
+        break;
+    case Qt::Key_Down:
+        camera->moveDown();
+        break;
+    case Qt::Key_Left:
+        camera->moveLeft();
+        break;
+    case Qt::Key_Right:
+        camera->moveRight();
+        break;
     }
 }
 
@@ -121,10 +134,7 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event) {
 
 void MainWindow::webcam() {
     QWebEngineView *qWebEngineView = new QWebEngineView(ui->frame);
-    qWebEngineView->load(QUrl("http://192.168.1.106:8080/?action=stream"));
-    qWebEngineView->show();
-    qWebEngineView->resize(481,321);
-    qWebEngineView->setContentsMargins(0,0,0,0);
+    camera->show(qWebEngineView);
 }
 
 void MainWindow::display_speed()
@@ -169,5 +179,29 @@ void MainWindow::display_irAvD()
 void MainWindow::on_arret_clicked()
 {
     myRobot->stop();
+}
+
+
+void MainWindow::on_lever_pressed()
+{
+    camera->moveUp();
+}
+
+
+void MainWindow::on_baisser_pressed()
+{
+    camera->moveDown();
+}
+
+
+void MainWindow::on_gauche_camera_pressed()
+{
+    camera->moveLeft();
+}
+
+
+void MainWindow::on_droite_camera_pressed()
+{
+    camera->moveRight();
 }
 
