@@ -17,7 +17,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    bool up=false, down, right, left, cameraUp, cameraDown, cameraRight, cameraLeft;
 
 private slots:
 

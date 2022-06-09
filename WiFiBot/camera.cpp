@@ -28,6 +28,6 @@ void Camera::moveRight() {
 void Camera::show(QWebEngineView *view) {
     view->load(QUrl("http://192.168.1.106:8080/?action=stream"));
     view->show();
-    view->resize(481,321);
-    view->setContentsMargins(0,0,0,0);
+    view->resize(491,371);
+    view->setZoomFactor(1.535);
 }
