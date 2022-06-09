@@ -13,8 +13,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_speed);
     connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_battery);
     TimerReceive->start(1000);
-    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irG);
-    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irD);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irAvG);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irArG);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irAvD);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irArD);
     TimerReceiveIR->start(100);
 }
 
@@ -139,16 +141,29 @@ void MainWindow::display_battery()
     ui->battery->setValue(battery);
 }
 
-void MainWindow::display_irG()
+void MainWindow::display_irAvG()
 {
-    int ir=myRobot->get_ir_G();
-    ui->ir_G->display(ir);
+    int ir=myRobot->get_ir_AvG();
+    ui->ir_AvG->display(ir);
 }
 
-void MainWindow::display_irD()
+void MainWindow::display_irArG()
 {
-    int ir=myRobot->get_ir_D();
-    ui->ir_D->display(ir);
+    int ir=myRobot->get_ir_ArG();
+    ui->ir_ArG->display(ir);
+}
+
+void MainWindow::display_irArD()
+{
+    int ir=myRobot->get_ir_AvD();
+    ui->ir_ArD->display(ir);
+}
+
+void MainWindow::display_irAvD()
+{
+    int ir=myRobot->get_ir_AvD();
+    ui->ir_AvD->display(ir);
+    //ui->ir_AvD->setStyleSheet("color:rgb(255,0,0)");
 }
 
 void MainWindow::on_arret_clicked()

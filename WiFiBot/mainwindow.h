@@ -43,8 +43,10 @@ private:
     void webcam();
     void display_speed();
     void display_battery();
-    void display_irG();
-    void display_irD();
+    void display_irAvG();
+    void display_irArG();
+    void display_irAvD();
+    void display_irArD();
 
 protected:
     void keyPressEvent(QKeyEvent *event);
