@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "myrobot.h"
+#include "camera.h"
 #include <QMainWindow>
 #include <QWebEngineView>
 
@@ -16,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    bool up=false, down, right, left, cameraUp, cameraDown, cameraRight, cameraLeft;
 
 private slots:
 
@@ -35,16 +37,27 @@ private slots:
 
     void on_arret_clicked();
 
+    void on_lever_pressed();
+
+    void on_baisser_pressed();
+
+    void on_gauche_camera_pressed();
+
+    void on_droite_camera_pressed();
+
 private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
+    Camera *camera;
     QTimer *TimerReceive;
     QTimer *TimerReceiveIR;
     void webcam();
     void display_speed();
     void display_battery();
-    void display_irG();
-    void display_irD();
+    void display_irAvG();
+    void display_irArG();
+    void display_irAvD();
+    void display_irArD();
 
 protected:
     void keyPressEvent(QKeyEvent *event);

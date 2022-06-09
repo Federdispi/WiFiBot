@@ -26,8 +26,11 @@ public:
     void setSpeed(int speed);
     int getDistanceReceived();
     int getBatteryReceived();
-    int get_ir_G();
-    int get_ir_D();
+    int get_ir_AvG();
+    int get_ir_ArG();
+    int get_ir_AvD();
+    int get_ir_ArD();
+
 
 signals:
     void updateUI(const QByteArray Data);

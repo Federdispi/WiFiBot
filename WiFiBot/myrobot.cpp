@@ -158,13 +158,15 @@ void MyRobot::stop() {
 
 int MyRobot::getDistanceReceived() {
     //DataReceived = socket->readAll();
-    int tics;
-    tics=DataReceived[0]+(DataReceived[1]<<8); //on recoit les data vitesse
+    int tics, ticsl, ticsr;
+    ticsl=((((long)DataReceived[8]<<24))+(((long)DataReceived[7]<<16))+(((long)DataReceived[6]<<8))+((long)DataReceived[5]));
+    ticsr=((((long)DataReceived[16]<<24))+(((long)DataReceived[15]<<16))+(((long)DataReceived[14]<<8))+((long)DataReceived[13]));
+    tics=(ticsl+ticsr)/2;
     qDebug()<<"tics : ";
     qDebug()<<tics;
-    /*tics-=previous_tics;
+    tics-=previous_tics;
     distanceReceived=tics*0.44/2048;
-    previous_tics=tics;*/
+    previous_tics=tics;
     distanceReceived=tics;
     return distanceReceived;
 }
@@ -175,19 +177,34 @@ int MyRobot::getBatteryReceived()
     battery=DataReceived[2];
     qDebug()<<"batterie : ";
     qDebug()<<battery;
+    battery=sqrt(battery*battery);
     return battery;
 }
 
-int MyRobot::get_ir_G()
+int MyRobot::get_ir_AvG()
 {
     int ir;
     ir=DataReceived[3];
     return ir;
 }
 
-int MyRobot::get_ir_D()
+int MyRobot::get_ir_ArG()
 {
     int ir;
     ir=DataReceived[4];
+    return ir;
+}
+
+int MyRobot::get_ir_AvD()
+{
+    int ir;
+    ir=DataReceived[11];
+    return ir;
+}
+
+int MyRobot::get_ir_ArD()
+{
+    int ir;
+    ir=DataReceived[12];
     return ir;
 }

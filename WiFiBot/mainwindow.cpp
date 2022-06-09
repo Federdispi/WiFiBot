@@ -7,14 +7,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     myRobot = new MyRobot;
+    camera = new Camera;
     webcam();
     TimerReceive = new QTimer(this);
     TimerReceiveIR=new QTimer(this);
     connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_speed);
     connect(TimerReceive, &QTimer::timeout, this, &MainWindow::display_battery);
     TimerReceive->start(1000);
-    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irG);
-    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irD);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irAvG);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irArG);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irAvD);
+    connect(TimerReceiveIR, &QTimer::timeout, this, &MainWindow::display_irArD);
     TimerReceiveIR->start(100);
 }
 
@@ -89,6 +92,18 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
     case Qt::Key_D:
         myRobot->goRightside();
         break;
+    case Qt::Key_Up:
+        camera->moveUp();
+        break;
+    case Qt::Key_Down:
+        camera->moveDown();
+        break;
+    case Qt::Key_Left:
+        camera->moveLeft();
+        break;
+    case Qt::Key_Right:
+        camera->moveRight();
+        break;
     }
 }
 
@@ -119,10 +134,7 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event) {
 
 void MainWindow::webcam() {
     QWebEngineView *qWebEngineView = new QWebEngineView(ui->frame);
-    qWebEngineView->load(QUrl("http://192.168.1.106:8080/?action=stream"));
-    qWebEngineView->show();
-    qWebEngineView->resize(491,371);
-    qWebEngineView->setZoomFactor(1.535);
+    camera->show(qWebEngineView);
 }
 
 void MainWindow::display_speed()
@@ -139,20 +151,57 @@ void MainWindow::display_battery()
     ui->battery->setValue(battery);
 }
 
-void MainWindow::display_irG()
+void MainWindow::display_irAvG()
 {
-    int ir=myRobot->get_ir_G();
-    ui->ir_G->display(ir);
+    int ir=myRobot->get_ir_AvG();
+    ui->ir_AvG->display(ir);
 }
 
-void MainWindow::display_irD()
+void MainWindow::display_irArG()
 {
-    int ir=myRobot->get_ir_D();
-    ui->ir_D->display(ir);
+    int ir=myRobot->get_ir_ArG();
+    ui->ir_ArG->display(ir);
+}
+
+void MainWindow::display_irArD()
+{
+    int ir=myRobot->get_ir_AvD();
+    ui->ir_ArD->display(ir);
+}
+
+void MainWindow::display_irAvD()
+{
+    int ir=myRobot->get_ir_AvD();
+    ui->ir_AvD->display(ir);
+    //ui->ir_AvD->setStyleSheet("color:rgb(255,0,0)");
 }
 
 void MainWindow::on_arret_clicked()
 {
     myRobot->stop();
+}
+
+
+void MainWindow::on_lever_pressed()
+{
+    camera->moveUp();
+}
+
+
+void MainWindow::on_baisser_pressed()
+{
+    camera->moveDown();
+}
+
+
+void MainWindow::on_gauche_camera_pressed()
+{
+    camera->moveLeft();
+}
+
+
+void MainWindow::on_droite_camera_pressed()
+{
+    camera->moveRight();
 }
 

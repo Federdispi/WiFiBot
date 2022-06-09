@@ -124,7 +124,6 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bodymovin_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bootstrap_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_charts.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_charts_private.pri \
@@ -132,8 +131,6 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_datavisualization.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_datavisualization_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designer.pri \
@@ -175,8 +172,6 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_purchasing.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_purchasing_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmldebug_private.pri \
@@ -189,16 +184,6 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3d.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3d_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3drender.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3drender_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri \
@@ -236,8 +221,6 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uiplugin.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools_private.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard.pri \
-		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_vulkan_support_private.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri \
@@ -360,7 +343,6 @@ C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_axserver_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bluetooth_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bodymovin_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_bootstrap_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_charts.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_charts_private.pri:
@@ -368,8 +350,6 @@ C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_concurrent_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_core_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_datavisualization.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_datavisualization_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_dbus_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_designer.pri:
@@ -411,8 +391,6 @@ C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_positioningquick_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_printsupport_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_purchasing.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_purchasing_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qml_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmldebug_private.pri:
@@ -425,16 +403,6 @@ C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3d.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3d_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3drender.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3drender_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quick_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri:
@@ -472,8 +440,6 @@ C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_theme_support_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uiplugin.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_uitools_private.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard.pri:
-C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_vulkan_support_private.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri:
