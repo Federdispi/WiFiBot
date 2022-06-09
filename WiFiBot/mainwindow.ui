@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>795</width>
-    <height>609</height>
+    <width>972</width>
+    <height>781</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,10 +49,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>0</y>
-      <width>451</width>
-      <height>301</height>
+      <x>230</x>
+      <y>90</y>
+      <width>481</width>
+      <height>321</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -68,10 +68,10 @@
    <widget class="QGroupBox" name="affichage_robot">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>310</y>
-      <width>411</width>
-      <height>251</height>
+      <x>750</x>
+      <y>10</y>
+      <width>211</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="title">
@@ -80,8 +80,8 @@
     <widget class="QDoubleSpinBox" name="speed">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>20</y>
+       <x>10</x>
+       <y>60</y>
        <width>181</width>
        <height>91</height>
       </rect>
@@ -111,8 +111,8 @@
     <widget class="QLCDNumber" name="speed_received">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>20</y>
+       <x>10</x>
+       <y>160</y>
        <width>91</width>
        <height>61</height>
       </rect>
@@ -142,8 +142,8 @@
     <widget class="QProgressBar" name="battery">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>40</y>
+       <x>10</x>
+       <y>30</y>
        <width>118</width>
        <height>23</height>
       </rect>
@@ -155,8 +155,8 @@
     <widget class="QLCDNumber" name="ir_D">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>170</y>
+       <x>100</x>
+       <y>270</y>
        <width>91</width>
        <height>61</height>
       </rect>
@@ -186,8 +186,8 @@
     <widget class="QLCDNumber" name="ir_G">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>170</y>
+       <x>0</x>
+       <y>270</y>
        <width>91</width>
        <height>61</height>
       </rect>
@@ -219,7 +219,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>230</y>
+      <y>410</y>
       <width>381</width>
       <height>331</height>
      </rect>
@@ -285,56 +285,88 @@
       <string>Avancer</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="arret">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>130</y>
+       <width>121</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>STOP</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QGroupBox" name="controle_camera">
+   <widget class="QGroupBox" name="controle_robot_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>261</width>
-      <height>151</height>
+      <x>590</x>
+      <y>410</y>
+      <width>381</width>
+      <height>331</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="title">
      <string>Interface de controle de la camera</string>
     </property>
-    <widget class="QScrollBar" name="horizontalScrollBar">
+    <widget class="QPushButton" name="baisser">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>100</y>
+       <x>120</x>
+       <y>230</y>
        <width>121</width>
-       <height>41</height>
+       <height>101</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));
-</string>
-     </property>
-     <property name="value">
-      <number>50</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+     <property name="text">
+      <string>Baisser</string>
      </property>
     </widget>
-    <widget class="QScrollBar" name="verticalScrollBar">
+    <widget class="QPushButton" name="droite_camera">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>130</y>
+       <width>121</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Droite</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gauche_camera">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>20</y>
-       <width>41</width>
-       <height>121</height>
+       <y>130</y>
+       <width>121</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gauche</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="lever">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>121</width>
+       <height>101</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));</string>
+      <string notr="true"/>
      </property>
-     <property name="value">
-      <number>50</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
+     <property name="text">
+      <string>Lever</string>
      </property>
     </widget>
    </widget>
@@ -343,15 +375,15 @@
    <zorder>affichage_robot</zorder>
    <zorder>controle_robot</zorder>
    <zorder>frame</zorder>
-   <zorder>controle_camera</zorder>
+   <zorder>controle_robot_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>795</width>
-     <height>26</height>
+     <width>972</width>
+     <height>17</height>
     </rect>
    </property>
   </widget>

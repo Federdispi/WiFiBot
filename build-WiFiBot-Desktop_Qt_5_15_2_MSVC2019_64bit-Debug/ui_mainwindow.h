@@ -19,7 +19,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -43,9 +42,12 @@ public:
     QPushButton *droite;
     QPushButton *gauche;
     QPushButton *avancer;
-    QGroupBox *controle_camera;
-    QScrollBar *horizontalScrollBar;
-    QScrollBar *verticalScrollBar;
+    QPushButton *arret;
+    QGroupBox *controle_robot_2;
+    QPushButton *baisser;
+    QPushButton *droite_camera;
+    QPushButton *gauche_camera;
+    QPushButton *lever;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -53,7 +55,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(795, 609);
+        MainWindow->resize(972, 791);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         connection = new QPushButton(centralwidget);
@@ -66,16 +68,16 @@ public:
         disconnection->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 9, 0);"));
         frame = new QFrame(centralwidget);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(340, 0, 451, 301));
+        frame->setGeometry(QRect(230, 90, 481, 321));
         frame->setStyleSheet(QString::fromUtf8("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 255), stop:0.19397 rgba(0, 0, 0, 255), stop:0.202312 rgba(122, 97, 0, 255), stop:0.495514 rgba(76, 58, 0, 255), stop:0.504819 rgba(255, 255, 255, 255), stop:0.79 rgba(255, 255, 255, 255), stop:1 rgba(255, 158, 158, 255));"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         affichage_robot = new QGroupBox(centralwidget);
         affichage_robot->setObjectName(QString::fromUtf8("affichage_robot"));
-        affichage_robot->setGeometry(QRect(380, 310, 411, 251));
+        affichage_robot->setGeometry(QRect(750, 10, 211, 341));
         speed = new QDoubleSpinBox(affichage_robot);
         speed->setObjectName(QString::fromUtf8("speed"));
-        speed->setGeometry(QRect(0, 20, 181, 91));
+        speed->setGeometry(QRect(10, 60, 181, 91));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -90,7 +92,7 @@ public:
         speed->setSingleStep(10.000000000000000);
         speed_received = new QLCDNumber(affichage_robot);
         speed_received->setObjectName(QString::fromUtf8("speed_received"));
-        speed_received->setGeometry(QRect(190, 20, 91, 61));
+        speed_received->setGeometry(QRect(10, 160, 91, 61));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -102,11 +104,11 @@ public:
         speed_received->setLineWidth(5);
         battery = new QProgressBar(affichage_robot);
         battery->setObjectName(QString::fromUtf8("battery"));
-        battery->setGeometry(QRect(290, 40, 118, 23));
+        battery->setGeometry(QRect(10, 30, 118, 23));
         battery->setValue(24);
         ir_D = new QLCDNumber(affichage_robot);
         ir_D->setObjectName(QString::fromUtf8("ir_D"));
-        ir_D->setGeometry(QRect(300, 170, 91, 61));
+        ir_D->setGeometry(QRect(100, 270, 91, 61));
         sizePolicy1.setHeightForWidth(ir_D->sizePolicy().hasHeightForWidth());
         ir_D->setSizePolicy(sizePolicy1);
         ir_D->setFont(font);
@@ -115,7 +117,7 @@ public:
         ir_D->setLineWidth(5);
         ir_G = new QLCDNumber(affichage_robot);
         ir_G->setObjectName(QString::fromUtf8("ir_G"));
-        ir_G->setGeometry(QRect(30, 170, 91, 61));
+        ir_G->setGeometry(QRect(0, 270, 91, 61));
         sizePolicy1.setHeightForWidth(ir_G->sizePolicy().hasHeightForWidth());
         ir_G->setSizePolicy(sizePolicy1);
         ir_G->setFont(font);
@@ -124,7 +126,7 @@ public:
         ir_G->setLineWidth(5);
         controle_robot = new QGroupBox(centralwidget);
         controle_robot->setObjectName(QString::fromUtf8("controle_robot"));
-        controle_robot->setGeometry(QRect(0, 230, 381, 331));
+        controle_robot->setGeometry(QRect(0, 410, 381, 331));
         controle_robot->setStyleSheet(QString::fromUtf8(""));
         reculer = new QPushButton(controle_robot);
         reculer->setObjectName(QString::fromUtf8("reculer"));
@@ -139,32 +141,36 @@ public:
         avancer->setObjectName(QString::fromUtf8("avancer"));
         avancer->setGeometry(QRect(120, 30, 121, 101));
         avancer->setStyleSheet(QString::fromUtf8(""));
-        controle_camera = new QGroupBox(centralwidget);
-        controle_camera->setObjectName(QString::fromUtf8("controle_camera"));
-        controle_camera->setGeometry(QRect(10, 80, 261, 151));
-        horizontalScrollBar = new QScrollBar(controle_camera);
-        horizontalScrollBar->setObjectName(QString::fromUtf8("horizontalScrollBar"));
-        horizontalScrollBar->setGeometry(QRect(50, 100, 121, 41));
-        horizontalScrollBar->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));\n"
-""));
-        horizontalScrollBar->setValue(50);
-        horizontalScrollBar->setOrientation(Qt::Horizontal);
-        verticalScrollBar = new QScrollBar(controle_camera);
-        verticalScrollBar->setObjectName(QString::fromUtf8("verticalScrollBar"));
-        verticalScrollBar->setGeometry(QRect(0, 20, 41, 121));
-        verticalScrollBar->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));"));
-        verticalScrollBar->setValue(50);
-        verticalScrollBar->setOrientation(Qt::Vertical);
+        arret = new QPushButton(controle_robot);
+        arret->setObjectName(QString::fromUtf8("arret"));
+        arret->setGeometry(QRect(120, 130, 121, 101));
+        controle_robot_2 = new QGroupBox(centralwidget);
+        controle_robot_2->setObjectName(QString::fromUtf8("controle_robot_2"));
+        controle_robot_2->setGeometry(QRect(590, 410, 381, 331));
+        controle_robot_2->setStyleSheet(QString::fromUtf8(""));
+        baisser = new QPushButton(controle_robot_2);
+        baisser->setObjectName(QString::fromUtf8("baisser"));
+        baisser->setGeometry(QRect(120, 230, 121, 101));
+        droite_camera = new QPushButton(controle_robot_2);
+        droite_camera->setObjectName(QString::fromUtf8("droite_camera"));
+        droite_camera->setGeometry(QRect(240, 130, 121, 101));
+        gauche_camera = new QPushButton(controle_robot_2);
+        gauche_camera->setObjectName(QString::fromUtf8("gauche_camera"));
+        gauche_camera->setGeometry(QRect(0, 130, 121, 101));
+        lever = new QPushButton(controle_robot_2);
+        lever->setObjectName(QString::fromUtf8("lever"));
+        lever->setGeometry(QRect(120, 30, 121, 101));
+        lever->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setCentralWidget(centralwidget);
         connection->raise();
         disconnection->raise();
         affichage_robot->raise();
         controle_robot->raise();
         frame->raise();
-        controle_camera->raise();
+        controle_robot_2->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 795, 26));
+        menubar->setGeometry(QRect(0, 0, 972, 17));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -186,7 +192,12 @@ public:
         droite->setText(QCoreApplication::translate("MainWindow", "Droite", nullptr));
         gauche->setText(QCoreApplication::translate("MainWindow", "Gauche", nullptr));
         avancer->setText(QCoreApplication::translate("MainWindow", "Avancer", nullptr));
-        controle_camera->setTitle(QCoreApplication::translate("MainWindow", "Interface de controle de la camera", nullptr));
+        arret->setText(QCoreApplication::translate("MainWindow", "STOP", nullptr));
+        controle_robot_2->setTitle(QCoreApplication::translate("MainWindow", "Interface de controle de la camera", nullptr));
+        baisser->setText(QCoreApplication::translate("MainWindow", "Baisser", nullptr));
+        droite_camera->setText(QCoreApplication::translate("MainWindow", "Droite", nullptr));
+        gauche_camera->setText(QCoreApplication::translate("MainWindow", "Gauche", nullptr));
+        lever->setText(QCoreApplication::translate("MainWindow", "Lever", nullptr));
     } // retranslateUi
 
 };
