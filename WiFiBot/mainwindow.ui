@@ -30,22 +30,6 @@
      <string>Connect</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="disconnection">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>0</y>
-      <width>161</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 9, 0);</string>
-    </property>
-    <property name="text">
-     <string>Disconnect</string>
-    </property>
-   </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
@@ -371,7 +355,6 @@
     </widget>
    </widget>
    <zorder>connection</zorder>
-   <zorder>disconnection</zorder>
    <zorder>affichage_robot</zorder>
    <zorder>controle_robot</zorder>
    <zorder>frame</zorder>

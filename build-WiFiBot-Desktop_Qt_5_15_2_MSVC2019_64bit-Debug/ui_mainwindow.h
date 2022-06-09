@@ -29,7 +29,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *connection;
-    QPushButton *disconnection;
     QFrame *frame;
     QGroupBox *affichage_robot;
     QDoubleSpinBox *speed;
@@ -55,17 +54,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(972, 791);
+        MainWindow->resize(972, 781);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         connection = new QPushButton(centralwidget);
         connection->setObjectName(QString::fromUtf8("connection"));
         connection->setGeometry(QRect(0, 0, 161, 81));
         connection->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 255, 0);"));
-        disconnection = new QPushButton(centralwidget);
-        disconnection->setObjectName(QString::fromUtf8("disconnection"));
-        disconnection->setGeometry(QRect(160, 0, 161, 81));
-        disconnection->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 9, 0);"));
         frame = new QFrame(centralwidget);
         frame->setObjectName(QString::fromUtf8("frame"));
         frame->setGeometry(QRect(230, 90, 481, 321));
@@ -163,7 +158,6 @@ public:
         lever->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setCentralWidget(centralwidget);
         connection->raise();
-        disconnection->raise();
         affichage_robot->raise();
         controle_robot->raise();
         frame->raise();
@@ -185,7 +179,6 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "WiFiBot", nullptr));
         connection->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
-        disconnection->setText(QCoreApplication::translate("MainWindow", "Disconnect", nullptr));
         affichage_robot->setTitle(QCoreApplication::translate("MainWindow", "Zone d'affichage du robot", nullptr));
         controle_robot->setTitle(QCoreApplication::translate("MainWindow", "Interface de controle du robot", nullptr));
         reculer->setText(QCoreApplication::translate("MainWindow", "Reculer", nullptr));

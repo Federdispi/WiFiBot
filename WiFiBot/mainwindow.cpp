@@ -28,17 +28,14 @@ void MainWindow::on_connection_clicked()
     if(ui->connection->text() == "Connect") {
         myRobot->doConnect();
         ui->connection->setText("Disconnect");
+        ui->connection->setStyleSheet ( "background-color:red;" );
     } else {
         myRobot->disConnect();
         ui->connection->setText("Connect");
+        ui->connection->setStyleSheet ( "background-color:rgb(0, 255, 0);" );
     }
 }
 
-
-void MainWindow::on_disconnection_clicked()
-{
-    myRobot->disConnect();
-}
 
 
 void MainWindow::on_avancer_clicked()

@@ -266,6 +266,7 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_config.prf \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.conf \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds.prf \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\common\msvc-version.conf \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf \
@@ -304,7 +305,6 @@ Makefile: ..\WiFiBot\WiFiBot.pro C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qma
 		C:\Qt\5.15.2\msvc2019_64\lib\Qt5Positioning.prl \
 		C:\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl \
 		C:\Qt\5.15.2\msvc2019_64\lib\qtmain.prl \
-		.qmake.stash \
 		C:\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf \
 		C:\Qt\5.15.2\msvc2019_64\lib\Qt5WebEngineWidgetsd.prl \
 		C:\Qt\5.15.2\msvc2019_64\lib\Qt5WebEngineCored.prl \
@@ -502,6 +502,7 @@ C:\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_functions.prf:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\features\qt_config.prf:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.conf:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds.prf:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\common\msvc-version.conf:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf:
@@ -540,7 +541,6 @@ C:\Qt\5.15.2\msvc2019_64\lib\Qt5Network.prl:
 C:\Qt\5.15.2\msvc2019_64\lib\Qt5Positioning.prl:
 C:\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl:
 C:\Qt\5.15.2\msvc2019_64\lib\qtmain.prl:
-.qmake.stash:
 C:\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf:
 C:\Qt\5.15.2\msvc2019_64\lib\Qt5WebEngineWidgetsd.prl:
 C:\Qt\5.15.2\msvc2019_64\lib\Qt5WebEngineCored.prl:
