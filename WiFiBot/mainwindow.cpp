@@ -140,7 +140,7 @@ void MainWindow::webcam() {
 void MainWindow::display_speed()
 {
     int distance = myRobot->getDistanceReceived();
-    int speed = distance * 3.6;
+    float speed = distance * 3.6;
     ui->speed_received->display(speed);
 }
 
@@ -154,26 +154,50 @@ void MainWindow::display_battery()
 void MainWindow::display_irAvG()
 {
     int ir=myRobot->get_ir_AvG();
+    if(ir<15)
+    {
+        ui->ir_AvG->setStyleSheet("color:rgb(255,0,0)");
+    }
+    else
+        ui->ir_AvG->setStyleSheet("color:rgb(0,0,0)");
     ui->ir_AvG->display(ir);
 }
 
 void MainWindow::display_irArG()
 {
     int ir=myRobot->get_ir_ArG();
+    if(ir<15)
+    {
+        ui->ir_ArG->setStyleSheet("color:rgb(255,0,0)");
+    }
+    else
+        ui->ir_ArG->setStyleSheet("color:rgb(0,0,0)");
     ui->ir_ArG->display(ir);
 }
 
 void MainWindow::display_irArD()
 {
-    int ir=myRobot->get_ir_AvD();
+    int ir=myRobot->get_ir_ArD();
+    if(ir<15)
+    {
+        ui->ir_ArD->setStyleSheet("color:rgb(255,0,0)");
+    }
+    else
+        ui->ir_ArD->setStyleSheet("color:rgb(0,0,0)");
     ui->ir_ArD->display(ir);
 }
 
 void MainWindow::display_irAvD()
 {
     int ir=myRobot->get_ir_AvD();
+    if(ir<15)
+    {
+        ui->ir_AvD->setStyleSheet("color:rgb(255,0,0)");
+    }
+    else
+        ui->ir_AvD->setStyleSheet("color:rgb(0,0,0)");
     ui->ir_AvD->display(ir);
-    //ui->ir_AvD->setStyleSheet("color:rgb(255,0,0)");
+    //
 }
 
 void MainWindow::on_arret_clicked()

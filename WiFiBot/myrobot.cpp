@@ -4,6 +4,7 @@
 MyRobot::MyRobot(QObject *parent) : QObject(parent) {
     _speed = 0;
     previous_tics=0;
+    distanceReceived=0;
     DataToSend.resize(9);
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
@@ -162,22 +163,22 @@ int MyRobot::getDistanceReceived() {
     ticsl=((((long)DataReceived[8]<<24))+(((long)DataReceived[7]<<16))+(((long)DataReceived[6]<<8))+((long)DataReceived[5]));
     ticsr=((((long)DataReceived[16]<<24))+(((long)DataReceived[15]<<16))+(((long)DataReceived[14]<<8))+((long)DataReceived[13]));
     tics=(ticsl+ticsr)/2;
-    qDebug()<<"tics : ";
-    qDebug()<<tics;
     tics-=previous_tics;
     distanceReceived=tics*0.44/2048;
     previous_tics=tics;
-    distanceReceived=tics;
+    qDebug()<<"tics : ";
+    qDebug()<<tics;
+    //distanceReceived=tics;
+    qDebug()<<"distance : ";
+    qDebug()<<distanceReceived;
     return distanceReceived;
 }
 
 int MyRobot::getBatteryReceived()
 {
-    int battery;
-    battery=DataReceived[2];
-    qDebug()<<"batterie : ";
-    qDebug()<<battery;
-    battery=sqrt(battery*battery);
+    unsigned char battery;
+    battery=DataReceived[2]; //183=full, 126 vide
+    battery=1.754*battery-221;
     return battery;
 }
 
@@ -185,26 +186,26 @@ int MyRobot::get_ir_AvG()
 {
     int ir;
     ir=DataReceived[3];
-    return ir;
+    return ir+110;
 }
 
 int MyRobot::get_ir_ArG()
 {
     int ir;
-    ir=DataReceived[4];
-    return ir;
+    ir=DataReceived[12];
+    return ir+110;
 }
 
 int MyRobot::get_ir_AvD()
 {
     int ir;
     ir=DataReceived[11];
-    return ir;
+    return ir+110;
 }
 
 int MyRobot::get_ir_ArD()
 {
     int ir;
-    ir=DataReceived[12];
-    return ir;
+    ir=DataReceived[4];
+    return ir+110;
 }
