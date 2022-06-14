@@ -3,6 +3,7 @@
 
 #include "myrobot.h"
 #include "camera.h"
+#include "gamepad.h"
 #include <QMainWindow>
 #include <QWebEngineView>
 
@@ -48,6 +49,7 @@ private:
     Ui::MainWindow *ui;
     MyRobot *myRobot;
     Camera *camera;
+    GamePad *gamePad;
     QTimer *TimerReceive;
     QTimer *TimerReceiveIR;
     void webcam();

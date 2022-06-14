@@ -1,4 +1,4 @@
-QT       += core gui network webenginewidgets
+QT       += core gui network webenginewidgets gamepad
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     camera.cpp \
+    gamepad.cpp \
     main.cpp \
     mainwindow.cpp \
     myrobot.cpp
 
 HEADERS += \
     camera.h \
+    gamepad.h \
     mainwindow.h \
     myrobot.h
 

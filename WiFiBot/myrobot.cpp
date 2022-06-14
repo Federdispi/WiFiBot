@@ -153,8 +153,16 @@ void MyRobot::goLeftside() {
 }
 
 void MyRobot::stop() {
-    setSpeed(0);
-    goForward();
+    DataToSend[0] = 0xFF;
+    DataToSend[1] = 0x07;
+    DataToSend[2] = _speed;
+    DataToSend[3] = 0;
+    DataToSend[4] = _speed;
+    DataToSend[5] = 0;
+    DataToSend[6] = 80;
+    short crc = Crc16(DataToSend, 7);
+    DataToSend[7] = crc;
+    DataToSend[8] = (crc >> 8);
 }
 
 int MyRobot::getDistanceReceived() {

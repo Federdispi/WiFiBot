@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     myRobot = new MyRobot;
     camera = new Camera;
+    gamePad = new GamePad;
     webcam();
     TimerReceive = new QTimer(this);
     TimerReceiveIR=new QTimer(this);
@@ -228,4 +229,3 @@ void MainWindow::on_droite_camera_pressed()
 {
     camera->moveRight();
 }
-
