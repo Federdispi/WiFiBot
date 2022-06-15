@@ -23,6 +23,7 @@ private:
     double _axisValue;
     void checkButton(int button);
     void checkAxis(int axis);
+    float speed;
 };
 
 #endif // GAMEPAD_H

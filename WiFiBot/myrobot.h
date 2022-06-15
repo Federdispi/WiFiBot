@@ -41,6 +41,7 @@ public slots:
     void readyRead();
     void MyTimerSlot();
     void speed();
+    int getstatus();
 
 private:
     QTcpSocket *socket;
@@ -48,6 +49,7 @@ private:
     int _speed;
     double distanceReceived;
     int previous_tics;
+    int status;
 };
 
 #endif // MYROBOT_H

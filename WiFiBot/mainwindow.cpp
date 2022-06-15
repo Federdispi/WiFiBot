@@ -157,6 +157,10 @@ void MainWindow::display_irAvG()
     int ir=myRobot->get_ir_AvG();
     if(ir<15)
     {
+        if(myRobot->getstatus()==1) //si on avance et objet < 15 -> stop
+        {
+            myRobot->stop();
+        }
         ui->ir_AvG->setStyleSheet("color:rgb(255,0,0)");
     }
     else
@@ -169,6 +173,10 @@ void MainWindow::display_irArG()
     int ir=myRobot->get_ir_ArG();
     if(ir<15)
     {
+        if(myRobot->getstatus()==2) //si on recule et objet < 15 -> stop
+        {
+            myRobot->stop();
+        }
         ui->ir_ArG->setStyleSheet("color:rgb(255,0,0)");
     }
     else
@@ -181,6 +189,10 @@ void MainWindow::display_irArD()
     int ir=myRobot->get_ir_ArD();
     if(ir<15)
     {
+        if(myRobot->getstatus()==2) //si on avance et objet < 15 -> stop
+        {
+            myRobot->stop();
+        }
         ui->ir_ArD->setStyleSheet("color:rgb(255,0,0)");
     }
     else
@@ -193,6 +205,10 @@ void MainWindow::display_irAvD()
     int ir=myRobot->get_ir_AvD();
     if(ir<15)
     {
+        if(myRobot->getstatus()==1) //si on avance et objet < 15 -> stop
+        {
+            myRobot->stop();
+        }
         ui->ir_AvD->setStyleSheet("color:rgb(255,0,0)");
     }
     else

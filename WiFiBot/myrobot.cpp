@@ -3,6 +3,7 @@
 #include "myrobot.h"
 MyRobot::MyRobot(QObject *parent) : QObject(parent) {
     _speed = 0;
+    status=0;
     previous_tics=0;
     distanceReceived=0;
     DataToSend.resize(9);
@@ -111,6 +112,7 @@ void MyRobot::goForward() {
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
+    status=1;
 }
 
 void MyRobot::goBackward() {
@@ -124,6 +126,7 @@ void MyRobot::goBackward() {
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
+    status=2;
 }
 
 void MyRobot::goRightside() {
@@ -137,6 +140,7 @@ void MyRobot::goRightside() {
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
+    status=1;
 }
 
 void MyRobot::goLeftside() {
@@ -150,19 +154,21 @@ void MyRobot::goLeftside() {
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
+    status=1;
 }
 
 void MyRobot::stop() {
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
-    DataToSend[2] = _speed;
+    DataToSend[2] = 0;
     DataToSend[3] = 0;
-    DataToSend[4] = _speed;
+    DataToSend[4] = 0;
     DataToSend[5] = 0;
     DataToSend[6] = 80;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
     DataToSend[8] = (crc >> 8);
+    status=0;
 }
 
 int MyRobot::getDistanceReceived() {
@@ -171,8 +177,8 @@ int MyRobot::getDistanceReceived() {
     ticsl=((((long)DataReceived[8]<<24))+(((long)DataReceived[7]<<16))+(((long)DataReceived[6]<<8))+((long)DataReceived[5]));
     ticsr=((((long)DataReceived[16]<<24))+(((long)DataReceived[15]<<16))+(((long)DataReceived[14]<<8))+((long)DataReceived[13]));
     tics=(ticsl+ticsr)/2;
-    tics-=previous_tics;
-    distanceReceived=tics*0.44/2048;
+    //tics-=previous_tics;
+    distanceReceived=(tics-previous_tics)*0.44/2048;
     previous_tics=tics;
     qDebug()<<"tics : ";
     qDebug()<<tics;
@@ -216,4 +222,9 @@ int MyRobot::get_ir_ArD()
     int ir;
     ir=DataReceived[4];
     return ir+110;
+}
+
+int MyRobot::getstatus()
+{
+    return status;
 }
