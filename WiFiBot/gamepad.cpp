@@ -3,12 +3,12 @@
 /*
  * Constructor
  */
-GamePad::GamePad(QObject *parent)
+GamePad::GamePad(QObject *parent, MyRobot *_myRobot)
     : QObject{parent}
 {
     speed=0;
     camera = new Camera;
-    myRobot = new MyRobot;
+    myRobot = _myRobot;
 
     /*
      * Button pressed event

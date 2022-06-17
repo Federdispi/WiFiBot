@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     myRobot = new MyRobot;
     camera = new Camera;
-    gamePad = new GamePad;
+    gamePad = new GamePad(0, myRobot);
     webcam();
     TimerReceive = new QTimer(this);
     TimerReceiveIR=new QTimer(this);

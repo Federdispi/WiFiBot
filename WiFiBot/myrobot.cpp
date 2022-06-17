@@ -200,7 +200,7 @@ void MyRobot::stop() {
     status=0;
 }
 
-int MyRobot::getDistanceReceived() {
+double MyRobot::getDistanceReceived() {
     //DataReceived = socket->readAll();
     double speedl, speedr, ticsl, ticsr;
     ticsl=((((long)DataReceived[8]<<24))+(((long)DataReceived[7]<<16))+(((long)DataReceived[6]<<8))+((long)DataReceived[5]));

@@ -14,7 +14,7 @@ class GamePad : public QObject
 {
     Q_OBJECT
 public:
-    explicit GamePad(QObject *parent = 0);
+    explicit GamePad(QObject *parent = 0, MyRobot *_myRobot = 0);
 
 private:
     Camera *camera;

@@ -24,7 +24,7 @@ public:
     void goLeftside();
     void stop();
     void setSpeed(int speed);
-    int getDistanceReceived();
+    double getDistanceReceived();
     int getBatteryReceived();
     int get_ir_AvG();
     int get_ir_ArG();
