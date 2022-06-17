@@ -105,10 +105,17 @@ void MyRobot::setSpeed(int speed) {
 void MyRobot::goForward() {
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
-    DataToSend[2] = _speed;
-    DataToSend[3] = 0;
-    DataToSend[4] = _speed;
-    DataToSend[5] = 0;
+    if(_speed > 120) {
+           DataToSend[2] = 120;
+           DataToSend[3] = _speed - 120;
+           DataToSend[4] = 120;
+           DataToSend[5] = _speed - 120;
+       } else {
+           DataToSend[2] = _speed;
+           DataToSend[3] = 0;
+           DataToSend[4] = _speed;
+           DataToSend[5] = 0;
+       }
     DataToSend[6] = 80;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
@@ -119,10 +126,17 @@ void MyRobot::goForward() {
 void MyRobot::goBackward() {
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
-    DataToSend[2] = _speed;
-    DataToSend[3] = 0;
-    DataToSend[4] = _speed;
-    DataToSend[5] = 0;
+    if(_speed > 120) {
+           DataToSend[2] = 120;
+           DataToSend[3] = _speed - 120;
+           DataToSend[4] = 120;
+           DataToSend[5] = _speed - 120;
+       } else {
+           DataToSend[2] = _speed;
+           DataToSend[3] = 0;
+           DataToSend[4] = _speed;
+           DataToSend[5] = 0;
+       }
     DataToSend[6] = 0;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
@@ -133,10 +147,17 @@ void MyRobot::goBackward() {
 void MyRobot::goRightside() {
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
-    DataToSend[2] = _speed;
-    DataToSend[3] = 0;
-    DataToSend[4] = _speed;
-    DataToSend[5] = 0;
+    if(_speed > 120) {
+           DataToSend[2] = 120;
+           DataToSend[3] = _speed - 120;
+           DataToSend[4] = 120;
+           DataToSend[5] = _speed - 120;
+       } else {
+           DataToSend[2] = _speed;
+           DataToSend[3] = 0;
+           DataToSend[4] = _speed;
+           DataToSend[5] = 0;
+       }
     DataToSend[6] = 64;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;
@@ -147,10 +168,17 @@ void MyRobot::goRightside() {
 void MyRobot::goLeftside() {
     DataToSend[0] = 0xFF;
     DataToSend[1] = 0x07;
-    DataToSend[2] = _speed;
-    DataToSend[3] = 0;
-    DataToSend[4] = _speed;
-    DataToSend[5] = 0;
+    if(_speed > 120) {
+           DataToSend[2] = 120;
+           DataToSend[3] = _speed - 120;
+           DataToSend[4] = 120;
+           DataToSend[5] = _speed - 120;
+       } else {
+           DataToSend[2] = _speed;
+           DataToSend[3] = 0;
+           DataToSend[4] = _speed;
+           DataToSend[5] = 0;
+       }
     DataToSend[6] = 16;
     short crc = Crc16(DataToSend, 7);
     DataToSend[7] = crc;

@@ -96,7 +96,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>160</y>
+       <y>180</y>
        <width>91</width>
        <height>61</height>
       </rect>
@@ -258,6 +258,38 @@
      </property>
      <property name="lineWidth">
       <number>5</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Vitesse (m/s)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>250</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Capteurs infrarouge</string>
      </property>
     </widget>
    </widget>
@@ -428,7 +460,7 @@
      <x>0</x>
      <y>0</y>
      <width>972</width>
-     <height>26</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

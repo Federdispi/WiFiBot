@@ -15,6 +15,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLCDNumber>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QProgressBar>
@@ -38,6 +39,8 @@ public:
     QLCDNumber *ir_AvG;
     QLCDNumber *ir_ArD;
     QLCDNumber *ir_ArG;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
     QGroupBox *controle_robot;
     QPushButton *reculer;
     QPushButton *droite;
@@ -89,7 +92,7 @@ public:
         speed->setSingleStep(10.000000000000000);
         speed_received = new QLCDNumber(affichage_robot);
         speed_received->setObjectName(QString::fromUtf8("speed_received"));
-        speed_received->setGeometry(QRect(10, 160, 91, 61));
+        speed_received->setGeometry(QRect(10, 180, 91, 61));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -139,6 +142,14 @@ public:
         ir_ArG->setFocusPolicy(Qt::NoFocus);
         ir_ArG->setLayoutDirection(Qt::LeftToRight);
         ir_ArG->setLineWidth(5);
+        lineEdit = new QLineEdit(affichage_robot);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setEnabled(false);
+        lineEdit->setGeometry(QRect(10, 160, 113, 20));
+        lineEdit_2 = new QLineEdit(affichage_robot);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setEnabled(false);
+        lineEdit_2->setGeometry(QRect(30, 250, 151, 20));
         controle_robot = new QGroupBox(centralwidget);
         controle_robot->setObjectName(QString::fromUtf8("controle_robot"));
         controle_robot->setGeometry(QRect(0, 410, 381, 331));
@@ -184,7 +195,7 @@ public:
         controle_robot_2->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 972, 26));
+        menubar->setGeometry(QRect(0, 0, 972, 17));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -200,6 +211,8 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "WiFiBot", nullptr));
         connection->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         affichage_robot->setTitle(QCoreApplication::translate("MainWindow", "Zone d'affichage du robot", nullptr));
+        lineEdit->setText(QCoreApplication::translate("MainWindow", "Vitesse (m/s)", nullptr));
+        lineEdit_2->setText(QCoreApplication::translate("MainWindow", "Capteurs infrarouge", nullptr));
         controle_robot->setTitle(QCoreApplication::translate("MainWindow", "Interface de controle du robot", nullptr));
         reculer->setText(QCoreApplication::translate("MainWindow", "Reculer", nullptr));
         droite->setText(QCoreApplication::translate("MainWindow", "Droite", nullptr));
