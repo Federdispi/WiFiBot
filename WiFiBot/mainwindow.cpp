@@ -140,8 +140,7 @@ void MainWindow::webcam() {
 
 void MainWindow::display_speed()
 {
-    int distance = myRobot->getDistanceReceived();
-    float speed = distance * 3.6;
+    double speed = myRobot->getDistanceReceived();
     ui->speed_received->display(speed);
 }
 

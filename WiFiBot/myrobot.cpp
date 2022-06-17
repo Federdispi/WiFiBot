@@ -4,7 +4,8 @@
 MyRobot::MyRobot(QObject *parent) : QObject(parent) {
     _speed = 0;
     status=0;
-    previous_tics=0;
+    previous_ticsL=0;
+    previous_ticsR=0;
     distanceReceived=0;
     DataToSend.resize(9);
     DataToSend[0] = 0xFF;
@@ -173,10 +174,41 @@ void MyRobot::stop() {
 
 int MyRobot::getDistanceReceived() {
     //DataReceived = socket->readAll();
-    int tics, ticsl, ticsr;
+    double speedl, speedr, ticsl, ticsr;
     ticsl=((((long)DataReceived[8]<<24))+(((long)DataReceived[7]<<16))+(((long)DataReceived[6]<<8))+((long)DataReceived[5]));
     ticsr=((((long)DataReceived[16]<<24))+(((long)DataReceived[15]<<16))+(((long)DataReceived[14]<<8))+((long)DataReceived[13]));
-    tics=(ticsl+ticsr)/2;
+
+    if(previous_ticsL<ticsl)
+    {
+        speedl=(ticsl-previous_ticsL)*3.14*0.135/0.025;
+        previous_ticsL=ticsl;
+    }
+    else
+    {
+        speedl=(0xFFFFFFFF-previous_ticsL+ticsl)*3.14*0.135/0.025;
+        previous_ticsL=ticsl;
+    }
+
+    if(previous_ticsR<ticsr)
+    {
+        speedr=(ticsr-previous_ticsR)*3.14*0.135/0.025;
+        previous_ticsR=ticsr;
+    }
+    else
+    {
+        speedr=(0xFFFFFFFF-previous_ticsR+ticsr)*3.14*0.135/0.025;
+        previous_ticsR=ticsr;
+    }
+
+    double speed =(speedr+speedl)/20000;
+
+    if(speed>1000000)
+    {
+        speed=0;
+    }
+
+    return speed;
+    /*tics=(ticsl+ticsr)/2;
     //tics-=previous_tics;
     distanceReceived=(tics-previous_tics)*0.44/2048;
     previous_tics=tics;
@@ -185,7 +217,7 @@ int MyRobot::getDistanceReceived() {
     //distanceReceived=tics;
     qDebug()<<"distance : ";
     qDebug()<<distanceReceived;
-    return distanceReceived;
+    return distanceReceived;*/
 }
 
 int MyRobot::getBatteryReceived()

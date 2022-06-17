@@ -48,7 +48,8 @@ private:
     QTimer *TimerEnvoi;
     int _speed;
     double distanceReceived;
-    int previous_tics;
+    double previous_ticsR;
+    double previous_ticsL;
     int status;
 };
 
